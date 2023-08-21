@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 // `app/page.tsx` is the UI for the `/` URL
 export default function Page() {
