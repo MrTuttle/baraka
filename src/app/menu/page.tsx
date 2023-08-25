@@ -9,7 +9,9 @@ export default function Page() {
     <AnimatedRoutes>
       <>
         <div>
-          <h1 className="text-9xl pt-3.5 font-thin">Menu</h1>
+          <h1 className="pt-3.5 megatypo">
+            <span>.</span>M.E<span>.</span>N.U.
+          </h1>
         </div>
       </>
     </AnimatedRoutes>

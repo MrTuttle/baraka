@@ -8,7 +8,17 @@ export default function Page() {
     <AnimatedRoutes>
       <>
         <div className="py-3.5">
-          <h1 className="text-9xl pt-3.5 font-thin">Hello, Home page!</h1>
+          <h1 className="pt-3.5 megatypo">
+            All you
+            <span>-</span>
+          </h1>
+          <h1 className="megatypo">need</h1>
+
+          <h1 className="megatypo">
+            <span>-</span>
+            is code
+          </h1>
+
           <h3 className="text-2xl font-light pt-10 pb-20">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
             consequatur cum ullam repellat dolores eos facilis praesentium

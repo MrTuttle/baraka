@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.megatypo {
+  font-weight: 700;
+  font-size:19rem;
+  letter-spacing: -1rem;
+  line-height: 16rem;
+}
+.megatypo span { font-weight: 300;
+
+}

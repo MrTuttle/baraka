@@ -4,7 +4,7 @@
 export default function Page() {
   return (
     <>
-      <h1 className="text-9xl pt-3.5 font-thin">About</h1>
+      <h1 className="pt-3.5 megatypo">/. About</h1>
     </>
   );
 }

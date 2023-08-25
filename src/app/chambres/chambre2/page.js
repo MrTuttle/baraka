@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <h1 className="text-9xl pt-3.5 font-thin">Chambre 2</h1>
+      <h1 className="pt-3.5 megatypo">Chambre 2</h1>
     </>
   );
 }

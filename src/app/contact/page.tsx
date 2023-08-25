@@ -7,7 +7,10 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <h1 className="text-9xl pt-3.5 font-thin">Contact</h1>
+      <h1 className="pt-3.5 megatypo">Cont</h1>
+      <h1 className="pt-3.5 megatypo">
+        <span>./</span>Act
+      </h1>
     </>
   );
 }

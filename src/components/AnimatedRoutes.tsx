@@ -13,7 +13,7 @@ export default function AnimatedRoutes({
         initial="initialState"
         animate="animateState"
         exit="exitState"
-        transition={{ duration: 10 }}
+        transition={{ duration: 0.7 }}
         variants={{
           initialState: { opacity: 0, y: 20 },
           animateState: { opacity: 1, y: 0 },

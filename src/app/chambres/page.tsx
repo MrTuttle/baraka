@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <div className=" py-3.5">
-        <h1 className="text-9xl pt-3.5 font-thin">Les chambres</h1>
+        <h1 className="pt-3.5 megatypo">|es chambres</h1>
         <h3 className="text-4xl  font-serif pt-10 pb-20">
           Cinq chambres, cinq parfums, cinq épices d'Afrique
         </h3>

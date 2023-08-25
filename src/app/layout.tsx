@@ -10,6 +10,10 @@ import AnimatedRoutes from "@/components/AnimatedRoutes";
 const lora = Lora({
   subsets: ["latin"],
 });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,7 +27,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lora.className}>
+      <body className={inter.className}>
+        {/* <body className={lora.className}> */}
         <Navbar />
         <div className="md:container md:mx-auto">{children}</div>
       </body>
