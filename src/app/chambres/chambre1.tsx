@@ -1,28 +1,25 @@
 "use client";
-import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function AnimatedRoutes({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import Image from "next/image";
+
+// `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
+export default function Page() {
   return (
-    <AnimatePresence>
+    <>
       <motion.div
         initial="initialState"
         animate="animateState"
         exit="exitState"
-        transition={{ duration: 10 }}
+        transition={{ duration: 0.8 }}
         variants={{
           initialState: { opacity: 0, y: 20 },
           animateState: { opacity: 1, y: 0 },
-          exitState: { opacity: 0, y: 20 },
+          exitState: {},
         }}
       >
-        <p className="text-gray-400">AnimatedRoutes applied</p>
-        {children}
+        <h1 className="text-9xl pt-3.5 font-thin">Chambre 1</h1>
       </motion.div>
-    </AnimatePresence>
+    </>
   );
 }

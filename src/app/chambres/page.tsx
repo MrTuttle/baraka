@@ -1,3 +1,6 @@
+"use client";
+import { motion, AnimatePresence } from "framer-motion";
+
 import Image from "next/image";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
@@ -10,7 +13,6 @@ export default function Page() {
           Cinq chambres, cinq parfums, cinq épices d'Afrique
         </h3>
       </div>
-
       <div className="grid md:grid-cols-4 gap-4">
         <div className="card bg-amber-300 p-3.5">01</div>
         <div className="card bg-accent p-3.5">02</div>

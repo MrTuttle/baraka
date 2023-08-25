@@ -1,14 +1,11 @@
-"use client";
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function AnimatedRoutes({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+// "use client";
+
+const animationWrapper = () => {
   return (
-    <AnimatePresence>
+    <>
       <motion.div
         initial="initialState"
         animate="animateState"
@@ -20,9 +17,10 @@ export default function AnimatedRoutes({
           exitState: { opacity: 0, y: 20 },
         }}
       >
-        <p className="text-gray-400">AnimatedRoutes applied</p>
-        {children}
+        <h1 className="text-9xl pt-3.5 font-thin">Contact</h1>
       </motion.div>
-    </AnimatePresence>
+    </>
   );
-}
+};
+
+export default animationWrapper;

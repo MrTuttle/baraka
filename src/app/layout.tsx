@@ -4,6 +4,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Lora } from "next/font/google";
+import AnimatedRoutes from "@/components/AnimatedRoutes";
 
 // const inter = Inter({ subsets: ["latin"] });
 const lora = Lora({

@@ -14,26 +14,29 @@ export const Navbar: React.FC = () => {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-4">
             <li>
-              <Link href="/">Menu</Link>
+              <Link href="/menu">Menu</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
             </li>
             <li>
               <Link href="/chambres">Chambres</Link>
             </li>
             <li>
-              <Link href="/">About</Link>
-            </li>
-            <li>
-              <Link href="/">Contact</Link>
-            </li>
-            <li>
               <details>
-                <summary>Chambres</summary>
+                <summary>
+                  {" "}
+                  <Link href="/chambres">Chambres</Link>
+                </summary>
                 <ul className="p-2 bg-base-100">
                   <li>
-                    <Link href="/chambres">blog/article1</Link>
+                    <Link href="/chambres/chambre1">Chambre une</Link>
                   </li>
                   <li>
-                    <Link href="/blog/article2">blog/article2</Link>
+                    <Link href="/chambres/chambre2">Chambre deux</Link>
                   </li>
                 </ul>
               </details>
