@@ -1,11 +1,32 @@
+"use client";
 // src/components/Navbar.tsx
 // Navbar Daisyui dark mode
 import Link from "next/link";
+import { useEffect, useLayoutEffect, useState } from "react";
+// const classNames = require("classnames");
+const classNames = require("classnames");
 
 export const Navbar: React.FC = () => {
+  // sticky stuffs
+
+  console.log("ouch");
+  const [scrolled, setScrolled] = useState(false);
+
+  useLayoutEffect(() => {
+    const handleScroll = () =>
+      window.scrollY > 0 ? setScrolled(true) : setScrolled(false);
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <div className="navbar bg-base-100">
+      {/* <div className={`navbar bg-base-100 ${scrolled ? "scrolled" : ""}`}> */}
+      <div
+        className={classNames("navbar bg-base-100 navbar-sicky", {
+          scrolled: scrolled,
+        })}
+      >
+        {/* <div className={paf.join(" ") + "navbar" + "bg-base-100"}> */}
         <div className="flex-1">
           <Link className="btn btn-ghost normal-case text-xl" href="/">
             HomedaisyUI
@@ -21,6 +42,9 @@ export const Navbar: React.FC = () => {
             </li>
             <li>
               <Link href="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
             </li>
             <li>
               <Link href="/chambres">Chambres</Link>

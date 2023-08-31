@@ -1,4 +1,6 @@
 "use client";
+import { List } from "@/components";
+import HeroExperimental from "@/components/HeroExperimental";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Image from "next/image";
@@ -11,6 +13,8 @@ export default function Page() {
       <h1 className="pt-3.5 megatypo">
         <span>./</span>Act
       </h1>
+      <HeroExperimental />
+      <List />
     </>
   );
 }
