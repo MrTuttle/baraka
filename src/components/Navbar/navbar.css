@@ -1,0 +1,23 @@
+.navbar-sticky {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 10px 1.5rem 10px 1.5rem;
+  /* align-items: center; */
+  z-index: 1;
+  top: 0px;
+  /* top: calc(1 * (0.4rem + 30px)); */
+  position: fixed;
+  /* width: 100%; */
+  transition: all 0.2s ease-out;
+
+
+
+}
+
+.scrolled {
+  /* top: -60; */
+  padding: 5px 10px 5px 10px;
+  transform: translate(0px, -64px);
+  /* transform:scale(0.5); */
+}

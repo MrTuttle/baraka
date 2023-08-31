@@ -2,17 +2,30 @@
 // src/components/Navbar.tsx
 // Navbar Daisyui dark mode
 import Link from "next/link";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 // const classNames = require("classnames");
 const classNames = require("classnames");
 
 export const Navbar: React.FC = () => {
   // sticky stuffs
 
-  console.log("ouch");
   const [scrolled, setScrolled] = useState(false);
+  const scrollRef = useRef(null);
+  let lastScrollY = window.pageYOffset;
+
+  console.log(`offset last : ${lastScrollY}`);
+  console.log(`offset win : ${window.scrollY}`);
+
+  useEffect(() => {
+    console.log("ha");
+    return () => {
+      console.log("scrollref = " + scrollRef);
+    };
+  }, []);
 
   useLayoutEffect(() => {
+    const lastScrollY = window.scrollY;
+
     const handleScroll = () =>
       window.scrollY > 0 ? setScrolled(true) : setScrolled(false);
     window.addEventListener("scroll", handleScroll);
@@ -22,7 +35,8 @@ export const Navbar: React.FC = () => {
     <>
       {/* <div className={`navbar bg-base-100 ${scrolled ? "scrolled" : ""}`}> */}
       <div
-        className={classNames("navbar bg-base-100 navbar-sicky", {
+        ref={scrollRef}
+        className={classNames("navbar bg-base-100 navbar-sticky", {
           scrolled: scrolled,
         })}
       >

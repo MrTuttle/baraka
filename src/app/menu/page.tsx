@@ -7,13 +7,14 @@ import ImgContainer from "@/components/ImgContainer";
 import ImageWrapper from "@/components/ImageWrapper";
 import ImageRef from "@/components/ImgContainer";
 import { motion, AnimatePresence } from "framer-motion";
+import { RevealYOnScroll } from "@/components/RevealYOnScroll";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
   return (
     <AnimatedRoutes>
       <>
-        <div>
+        <div className="floor pb-90">
           <h1 className="pt-3.5 megatypo">
             <span>.</span>M.E<span>.</span>N.U.
           </h1>
@@ -21,7 +22,7 @@ export default function Page() {
         <section className="floor pt-90">
           <div>
             <RevealOnScroll>
-              <h1 className="text-6xl"> Titre 1</h1>
+              <h1 className="text-6xl"> Le titre long ou presaue</h1>
             </RevealOnScroll>
             <RevealOnScroll>
               <h2 className="pt-3.5 text-3xl">Sous titre</h2>
@@ -36,11 +37,7 @@ export default function Page() {
                 se joue aussi en scroll inverse.
               </p>
             </RevealOnScroll>
-            <RevealOnScroll>
-              <ImageWrapper>
-                <ImageRef path="../../baraka/public/baraka/mountains.avif"></ImageRef>
-              </ImageWrapper>
-            </RevealOnScroll>
+
             <RevealOnScroll>
               <button className="btn btn-outline btn-secondary">
                 Contact me
@@ -49,9 +46,9 @@ export default function Page() {
           </div>
         </section>
         <section className="floor">
-          <div>
+          <div className="w-2/3 p-10">
             <RevealOnScroll>
-              <h1 className="text-6xl"> Titre 2</h1>
+              <h1 className="text-6xl"> Titre pour image</h1>
             </RevealOnScroll>
             <RevealOnScroll>
               <h2 className="pt-3.5 text-3xl">Sous titre</h2>
@@ -63,11 +60,7 @@ export default function Page() {
                 ipsum dolor sit amet consectetur adipisicing elit. Ex tempore
                 soluta, sed aspernatur cum accusantium rerum consequuntur
                 cupiditate facilis nulla ipsum recusandae modi sapiente error
-                eveniet quisquam, alias, quibusdam enim. Lorem, ipsum dolor sit
-                amet consectetur adipisicing elit. Harum eius voluptas deleniti
-                pariatur doloribus inventore cupiditate possimus, officia et
-                animi veniam temporibus obcaecati voluptates ea, soluta ab
-                minima. Dignissimos, nihil!
+                eveniet quisquam,
               </p>
             </RevealOnScroll>
             <RevealOnScroll>
@@ -76,6 +69,15 @@ export default function Page() {
               </button>
             </RevealOnScroll>
           </div>
+          <RevealYOnScroll>
+            <div className="p-10">
+              <img
+                className="object-cover object-center inset-0 bloctraceblue transform-origin"
+                src="https://images.unsplash.com/photo-1693040517341-6e1565f8ef42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80"
+                alt="img test"
+              />
+            </div>
+          </RevealYOnScroll>
         </section>
         <section className="floor">
           <div>

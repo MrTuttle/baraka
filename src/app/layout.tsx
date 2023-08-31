@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { NavbarSticky } from "@/components/Navbar/NavbarSticky";
 
 import "./globals.css";
 import type { Metadata } from "next";
@@ -31,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* <body className={lora.className}> */}
-        <Navbar />
+        <NavbarSticky />
         <div className="bloctrace">
           {/* <Header /> */}
           {/* <ImgContainer></ImgContainer> */}
