@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import AnimatedRoutes from "@/components/AnimatedRoutes";
-import ImgContainer from "@/components/ImgContainer";
 import Header from "@/components/Header/Header";
 
 // `app/page.tsx` is the UI for the `/` URL
@@ -29,7 +27,6 @@ export default function Page() {
           </h3>
           <Header />
         </div>
-        <ImgContainer>gh</ImgContainer>
 
         <div className="grid md:grid-cols-4 gap-4">
           <div className="card bg-primary p-3.5">01</div>
