@@ -35,7 +35,7 @@ export default function Page() {
           <div className="bg-accent p-3.5 rounded-box">04</div>
           <div className="bg-slate-600 card p-3.5">
             05
-            <Image
+            <img
               className="rounded-box"
               src="/portrait-131.jpg"
               alt="willem Dafoe"
@@ -45,7 +45,7 @@ export default function Page() {
           </div>
           <div className="card bg-slate-600 p-3.5">
             06
-            <Image
+            <img
               src="/baraka/chambre-2.jpg"
               alt="willem Dafoe"
               width={600}
