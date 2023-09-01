@@ -3,9 +3,6 @@ import bgImage from "../../../public/mountains.jpg";
 import Image from "next/image";
 
 const Header = () => {
-  const debug = (monlog) => {
-    console.log(`mon logg : ${monlog}`);
-  };
   const srcImage = bgImage.src;
   return (
     <>
@@ -24,7 +21,6 @@ const Header = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            {debug(srcImage)}
 
             <button className="btn btn-primary">Get Started</button>
             <Image src={bgImage} width="100" height="50" alt="alt text" />
