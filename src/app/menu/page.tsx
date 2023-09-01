@@ -69,7 +69,7 @@ export default function Page() {
           </div>
           <RevealYOnScroll>
             <div className="p-10">
-              <Image
+              <img
                 className="object-cover object-center inset-0 bloctraceblue transform-origin"
                 width={900}
                 height={900}
@@ -108,7 +108,7 @@ export default function Page() {
         <section>
           <div className="container mx-auto flex px-5 pb-24 md:flex-row flex-col item-center bloctrace">
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10  md:mb-0 relative rounded overflow-hidden">
-              <Image
+              <img
                 width={500}
                 height={500}
                 className="object-cover object-center inset-0 bloctraceblue transform-origin"
@@ -121,7 +121,7 @@ export default function Page() {
         <section>
           <div className="floor container bloctracegreen">
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10  md:mb-0 relative rounded overflow-hidden bloctrace matrix">
-              <Image
+              <img
                 height={500}
                 width={500}
                 className="object-cover object-center inset-0 bloctraceblue"
@@ -130,7 +130,7 @@ export default function Page() {
               />
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10  md:mb-0 relative rounded overflow-hidden bloctrace">
-              <Image
+              <img
                 width={800}
                 height={450}
                 className="object-cover object-center inset-0 bloctraceblue mask"
