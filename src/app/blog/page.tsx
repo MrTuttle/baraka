@@ -14,7 +14,7 @@ interface Props {
   blogs: ["Mon blog", "ton Blog", "son blog"];
 }
 
-export default function Page({ blogs }: Props) {
+export default function Page() {
   return (
     <>
       <h1 className="pt-3.5 megatypo">Hello Blog</h1>
