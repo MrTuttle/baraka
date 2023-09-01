@@ -31,9 +31,9 @@ export default function Page() {
               <p className="pt-1.5 pb-7">
                 After designing web interfaces since 19 years as creative
                 director in agency, I spend this year to learn to code it. Le
-                composant RevealOnScroll est plus light que Reveal, il n'a pas
+                composant RevealOnScroll est plus light que Reveal, il n’a pas
                 besoins des useEffects. Il utilise whileInView pour detecter si
-                le composant est dans le viewport ou non. A noter, l'animation
+                le composant est dans le viewport ou non. A noter, l’animation
                 se joue aussi en scroll inverse.
               </p>
             </RevealOnScroll>
