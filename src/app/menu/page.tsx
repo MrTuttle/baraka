@@ -3,10 +3,8 @@
 import AnimatedRoutes from "@/components/AnimatedRoutes";
 import Image from "next/image";
 import { RevealOnScroll } from "@/components/RevealOnScroll";
-import ImgContainer from "@/components/ImgContainer";
-import ImageWrapper from "@/components/ImageWrapper";
-import ImageRef from "@/components/ImgContainer";
-import { motion, AnimatePresence } from "framer-motion";
+
+import { motion } from "framer-motion";
 import { RevealYOnScroll } from "@/components/RevealYOnScroll";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
@@ -71,9 +69,11 @@ export default function Page() {
           </div>
           <RevealYOnScroll>
             <div className="p-10">
-              <img
+              <Image
                 className="object-cover object-center inset-0 bloctraceblue transform-origin"
-                src="https://images.unsplash.com/photo-1693040517341-6e1565f8ef42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80"
+                width={900}
+                height={900}
+                src="/photo-1693040517341-6e1565f8ef42.jpeg"
                 alt="img test"
               />
             </div>
@@ -108,9 +108,11 @@ export default function Page() {
         <section>
           <div className="container mx-auto flex px-5 pb-24 md:flex-row flex-col item-center bloctrace">
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10  md:mb-0 relative rounded overflow-hidden">
-              <img
+              <Image
+                width={500}
+                height={500}
                 className="object-cover object-center inset-0 bloctraceblue transform-origin"
-                src="https://images.unsplash.com/photo-1693040517341-6e1565f8ef42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80"
+                src="/baraka/chambre-5.jpg"
                 alt="img test"
               />
             </div>
@@ -119,16 +121,20 @@ export default function Page() {
         <section>
           <div className="floor container bloctracegreen">
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10  md:mb-0 relative rounded overflow-hidden bloctrace matrix">
-              <img
+              <Image
+                height={500}
+                width={500}
                 className="object-cover object-center inset-0 bloctraceblue"
-                src="https://images.unsplash.com/photo-1693040517341-6e1565f8ef42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80"
+                src="/baraka/chambre-2.jpg"
                 alt="img test"
               />
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10  md:mb-0 relative rounded overflow-hidden bloctrace">
-              <motion.img
+              <Image
+                width={800}
+                height={450}
                 className="object-cover object-center inset-0 bloctraceblue mask"
-                src="https://images.unsplash.com/photo-1693040517341-6e1565f8ef42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80"
+                src="/portrait-131.jpg"
                 alt="img test"
               />
             </div>{" "}
