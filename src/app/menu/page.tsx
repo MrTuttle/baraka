@@ -6,21 +6,22 @@ import { RevealOnScroll } from "@/components/RevealOnScroll";
 
 import { motion } from "framer-motion";
 import { RevealYOnScroll } from "@/components/RevealYOnScroll";
+import NavBarResp from "@/components/Navbar/NavbarResp";
 
 // `app/dashboard/page.tsx` is the UI for the `/dashboard` URL
 export default function Page() {
   return (
     <AnimatedRoutes>
       <>
-        <div className="floor pb-90">
-          <h1 className="pt-3.5 megatypo">
+        <div className="floor pb-10">
+          <h1 className="text-7xl font-bold sm:text-[11rem] md:text-[14rem] lg:text-[19rem]">
             <span>.</span>M.E<span>.</span>N.U.
           </h1>
         </div>
         <section className="floor pt-90">
           <div>
             <RevealOnScroll>
-              <h1 className="text-6xl"> Le titre long ou presaue</h1>
+              <h1 className="text-4xl"> Le titre long ou presaue</h1>
             </RevealOnScroll>
             <RevealOnScroll>
               <h2 className="pt-3.5 text-3xl">Sous titre</h2>
@@ -43,10 +44,10 @@ export default function Page() {
             </RevealOnScroll>
           </div>
         </section>
-        <section className="floor">
-          <div className="w-2/3 p-10">
+        <section className="floor py-50">
+          <div className="">
             <RevealOnScroll>
-              <h1 className="text-6xl"> Titre pour image</h1>
+              <h1 className="text-4xl"> Titre pour image</h1>
             </RevealOnScroll>
             <RevealOnScroll>
               <h2 className="pt-3.5 text-3xl">Sous titre</h2>

@@ -1,5 +1,6 @@
 "use client";
 import { List } from "@/components";
+import Form from "@/components/Forms/Form";
 import HeroExperimental from "@/components/HeroExperimental";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -15,6 +16,7 @@ export default function Page() {
       </h1>
       <HeroExperimental />
       <List />
+      <Form />
     </>
   );
 }

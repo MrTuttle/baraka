@@ -90,6 +90,9 @@ export const NavbarSticky: React.FC = () => {
                 </ul>
               </details>
             </li>
+            <li>
+              <Link href="/listofposts">Posts</Link>
+            </li>
           </ul>
         </div>
       </div>

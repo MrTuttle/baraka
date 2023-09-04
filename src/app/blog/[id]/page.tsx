@@ -1,5 +1,7 @@
 import AnimatedRoutes from "@/components/AnimatedRoutes";
 
+// export default function Page({ params }: any) {
+
 export default function Page({ params }: { params: { id: string } }) {
   return (
     <>

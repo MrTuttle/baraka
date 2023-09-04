@@ -9,7 +9,9 @@ export default function Page() {
     <>
       <section>
         <RevealOnScroll>
-          <h1 className="pt-3.5 megatypo">/. About</h1>
+          <h1 className="pt-20 text-8xl font-bold sm:text-[11rem] md:text-[14rem] lg:text-[19rem]">
+            /. About
+          </h1>
         </RevealOnScroll>
       </section>
       <section className="floor">
