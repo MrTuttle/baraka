@@ -134,3 +134,10 @@ transform: matrix3d(
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
+
+.assets {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid blue;
+}

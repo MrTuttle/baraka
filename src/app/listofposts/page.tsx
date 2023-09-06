@@ -49,6 +49,7 @@ export default async function ListOfPosts() {
           );
         })}
       </div>
+      <div className="assets"></div>
       <div>
         {users.map((user: any) => {
           return (
