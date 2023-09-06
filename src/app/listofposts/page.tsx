@@ -1,9 +1,31 @@
 import Image from "next/image";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
+
+const getContactsData = async () => {
+  const contact = await prisma.contact.findMany();
+  // const res = await fetch(prisma);
+  console.log("hello");
+
+  return contact;
+};
 
 const getPostsData = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   return res.json();
 };
+
+// export async function getServerSideProps() {
+//   // prisma query
+//   const contacts = await prisma.contact.findMany();
+//   console.log(contacts);
+//   return {
+//     props: {
+//       initialContact: contacts,
+//     },
+//   };
+// }
 
 const getUsersData = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -16,6 +38,9 @@ const getDogData = async () => {
     cache: "no-store",
   });
   return res.json();
+};
+const logotor = () => {
+  console.log("Hello");
 };
 
 // https://unsplash.com/fr/photos/un-couple-de-personnes-marchant-dans-une-rue-la-nuit-qCayic4GiwQ
@@ -32,12 +57,31 @@ export default async function ListOfPosts() {
     getPostsData(),
     getUsersData(),
     getDogData(),
+    getContactsData(),
   ]);
+
+  const contacts = await getContactsData();
 
   return (
     <>
       <div>
         <Image src={dog.message} width="500" height="500" alt="chien" />
+      </div>
+      {/* recupere sqlite */}
+      <div className="py-90">
+        <p>
+          {contacts.map(
+            (contact) => contact.firstName + " " + contact.lastName
+          )}
+        </p>
+        <ul>
+          {contacts.map((contact) => (
+            <li
+              key={contact.id}
+            >{`contact : ${contact.firstName} ${contact.lastName}`}</li>
+          ))}
+          <li>END</li>
+        </ul>
       </div>
       <div>
         {posts.map((post: any) => {
