@@ -1,13 +1,14 @@
 import Image from "next/image";
 import AnimatedRoutes from "@/components/AnimatedRoutes";
 import Header from "@/components/Header/Header";
+import FullScreenBg from "@/components/FullScreenBg";
 
 // `app/page.tsx` is the UI for the `/` URL
 export default function Page() {
   return (
     <AnimatedRoutes>
       <>
-        <div className="py-3.5">
+        <div className="py-3.5 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 ">
           <h1 className="pt-20 text-8xl font-bold sm:text-[11rem] md:text-[14rem] lg:text-[19rem]">
             All you
             <span>-</span>
@@ -21,7 +22,7 @@ export default function Page() {
             is code
           </h1>
 
-          <h3 className="text-2xl font-light pt-10 pb-20">
+          <h3 className="text-2xl font-light pt-10 pb-20 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
             consequatur cum ullam repellat dolores eos facilis praesentium
             doloremque! Suscipit nobis eos corrupti molestias accusamus error!
@@ -30,6 +31,7 @@ export default function Page() {
           <Header />
         </div>
 
+        <FullScreenBg />
         <div className="grid md:grid-cols-4 gap-4">
           <div className="card bg-primary p-3.5">01</div>
           <div className="card bg-accent p-3.5">02</div>

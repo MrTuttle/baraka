@@ -29,16 +29,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={inter.className}>
         {/* <body className={lora.className}> */}
         <NavbarSticky />
-        <div className="bloctrace">
-          {/* <Header /> */}
-          {/* <ImgContainer></ImgContainer> */}
+        {/* <Header /> */}
+        {/* <ImgContainer></ImgContainer> */}
 
-          <div className="md:container md:mx-auto">{children}</div>
-        </div>
+        <div className="w-full md:mx-auto">{children}</div>
       </body>
     </html>
   );

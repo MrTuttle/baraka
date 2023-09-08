@@ -1,12 +1,15 @@
 import Image from "next/image";
 import { PrismaClient } from "@prisma/client";
+import FinData from "@/components/utilities/FinData";
+import ContactList from "@/components/ContactList";
+import Form from "@/components/Forms/Form";
+import NavBarFluid from "@/components/Navbar/NavBarFluid";
 
 const prisma = new PrismaClient();
 
 const getContactsData = async () => {
   const contact = await prisma.contact.findMany();
   // const res = await fetch(prisma);
-  console.log("hello");
 
   return contact;
 };
@@ -57,7 +60,6 @@ export default async function ListOfPosts() {
     getPostsData(),
     getUsersData(),
     getDogData(),
-    getContactsData(),
   ]);
 
   const contacts = await getContactsData();
@@ -67,6 +69,8 @@ export default async function ListOfPosts() {
       <div>
         <Image src={dog.message} width="500" height="500" alt="chien" />
       </div>
+      <FinData />
+      <ContactList />
       {/* recupere sqlite */}
       <div className="py-90">
         <p>
@@ -76,13 +80,24 @@ export default async function ListOfPosts() {
         </p>
         <ul>
           {contacts.map((contact) => (
-            <li
-              key={contact.id}
-            >{`contact : ${contact.firstName} ${contact.lastName}`}</li>
+            <li key={contact.id}>
+              {`contact : ${contact.firstName} ${contact.lastName} | ${contact.email} | ${contact.id}`}
+              <Image
+                src={contact.avatar}
+                width="100"
+                height="100"
+                alt="avatar"
+              />
+            </li>
           ))}
           <li>END</li>
         </ul>
       </div>
+      <div>
+        <h1>FORME</h1>
+        <Form />
+      </div>
+      <NavBarFluid />
       <div>
         {posts.map((post: any) => {
           return (
